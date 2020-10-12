@@ -1,7 +1,7 @@
 # ActDES-a Curated Actinobacterial Database for Evolutionary Studies   
 Scripts used in the curated database of 612 high quality actinobacterial genomes from 80 genera, chosen to represent a broad phylogenetic group with equivalent genome re-annotation. 
 
-## Download genome annotacions from Zenodo  
+## Download genome annotations from Zenodo  
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.4081595.svg)](https://doi.org/10.5281/zenodo.4081595)
 
 
