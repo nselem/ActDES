@@ -16,7 +16,7 @@ my %GENOME_NAMES; ## Hash Genome_Id -> Organisms Name
 my %FUNC;
 my %GENES;
 my @functions;
-
+my $Id_file=$ARGV[0];
 
 sub readOrganisms;
 sub CountFunctions;
@@ -28,7 +28,7 @@ sub Output;
 #################################
 ###### Main program
 ####################################################
-%GENOME_NAMES=readOrganisms(@ID); ##Read txt files and fill Hash Genome_Id -> Organisms Name
+%GENOME_NAMES=readOrganisms($Id_file,@ID); ##Read txt files and fill Hash Genome_Id -> Organisms Name
 %FUNC=CountFunctions($N,\%GENES,@GENOMES); ##Store in FUNC The number of fucntion and in GENES the pegs of the functions
 headers(\%GENOME_NAMES,@GENOMES);	
 Output($N,\%GENES,%FUNC);
@@ -37,23 +37,25 @@ Output($N,\%GENES,%FUNC);
 
 
 sub readOrganisms{
-	my @ID=shift;
+	my $file=shift;
+	my @ID=@_;
 	my %GENOME_NAMES;
+	open(FILE,$file) or die "Could not open file $file $!";
 	foreach my $ID(@ID){
-		open(FILE,$ID) or die "Could not open file $ID $!";
+		#print "En el for ID $ID\n";
 		while ( my $line = <FILE> ) {
 			$line=~s/\n|\r//g;
 			my @st=split("\t",$line);
 			my $Id=$st[0];
 			my $name=$st[2];
 			$GENOME_NAMES{$Id}=$name;
-			#print "$Id => $GENOME_NAMES{$Id}\n";
+			print "$Id => $GENOME_NAMES{$Id}\n";
 			}
 		close FILE; 
 		}
 	return (%GENOME_NAMES);
 	}
-
+#................................................................
 
 sub CountFunctions{
 	my $N=shift;
