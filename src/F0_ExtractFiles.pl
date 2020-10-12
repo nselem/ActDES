@@ -7,7 +7,6 @@ use warnings;
 ## 1. Decompres and extract binding file from tarball RAST download
 
 ######### Subs and variables #######################
-my @TARS=qx/ls *.tar/; ## Read all cvs
 
 sub unTar;
 sub extractFiles;
@@ -15,7 +14,9 @@ sub extractFiles;
 #################################
 ###### Main program
 ####################################################
-
+# `gunzip data/*.gz `;
+my @TARS=qx/ls *.tar/; ## Read all cvs
+#exit;
 foreach my $tar (@TARS){
 	unTar($tar);   ## Decompress all tar files on the script folder
 	extractFiles($tar); ## Extract the binding files

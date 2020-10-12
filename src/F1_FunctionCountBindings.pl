@@ -9,8 +9,8 @@ use warnings;
 #     Uses bindings files from the tar download from RAST
 
 ######### Subs and variables #######################
-my @GENOMES=qx/ls *.bindings/; ## Read all cvs
-my @ID=qx/ls *.txt/; ## Read all text files
+my @GENOMES=qx/ls data\/bindings\/*.bindings/; ## Read all cvs
+my @ID=qx/ls data\/annotations\/*.txt/; ## Read all text files
 my $N=scalar @GENOMES; ## Number of files
 my %GENOME_NAMES; ## Hash Genome_Id -> Organisms Name
 my %FUNC;
@@ -40,7 +40,7 @@ sub readOrganisms{
 	my $file=shift;
 	my @ID=@_;
 	my %GENOME_NAMES;
-	open(FILE,$file) or die "Could not open file $file $!";
+	open(FILE,"data/$file") or die "Could not open file $file $!";
 	foreach my $ID(@ID){
 		#print "En el for ID $ID\n";
 		while ( my $line = <FILE> ) {
@@ -51,8 +51,8 @@ sub readOrganisms{
 			$GENOME_NAMES{$Id}=$name;
 			print "$Id => $GENOME_NAMES{$Id}\n";
 			}
-		close FILE; 
 		}
+	close FILE; 
 	return (%GENOME_NAMES);
 	}
 #................................................................
@@ -119,12 +119,13 @@ sub headers{
 	my $refNAMES=shift;
 	my @GENOMES=@_;
 
-	open (FILE,">FunctionTable.cvs") or die "Could not open file Salida $!";
-	open (PEGS,">PegsTable.cvs") or die "Could not open file Salida $!";
+	open (FILE,">output/FunctionTable.csv") or die "Could not open file Salida $!";
+	open (PEGS,">output/PegsTable.csv") or die "Could not open file Salida $!";
 	my $headers="FUNCTION\t";
 	foreach my $genome(@GENOMES){
 		chomp $genome;
 		$genome=~s/\.bindings//;
+		$genome=~s/data\/bindings\///;
 		print "#$genome# => #$refNAMES->{$genome}#\n";
 		$headers=$headers.$refNAMES->{$genome}."\t";
 		}
@@ -140,8 +141,8 @@ sub Output{
 	my $refGENES=shift;
 	my %FUNC=(@_);
 
-	open (FILE,">>FunctionTable.cvs") or die "Could not open file Salida $!";
-	open (PEGS,">>PegsTable.cvs") or die "Could not open file Salida $!";
+	open (FILE,">>output/FunctionTable.csv") or die "Could not open file Salida $!";
+	open (PEGS,">>output/PegsTable.csv") or die "Could not open file Salida $!";
 
 	foreach my $func(sort keys %FUNC){
 		#print "$func\n";
