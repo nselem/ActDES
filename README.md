@@ -2,13 +2,16 @@
 Scripts used in the curated database of 612 high quality actinobacterial genomes from 80 genera, chosen to represent a broad phylogenetic group with equivalent genome re-annotation. 
 
 ## Download genome annotations from Zenodo  
-[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.4081595.svg)](https://doi.org/10.5281/zenodo.4081595)
+Annotation, nucleotides and aminoacid data for 612 genomes in ActDES have been deposited at ZENODO repository with [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.4081595.svg)](https://doi.org/10.5281/zenodo.4081595)
 
+Databases can be donwloaded at the following links:  
 
-[Annotations](https://zenodo.org/record/4081595/files/annotations.tar.gz?download=1)
-[Bindings](https://zenodo.org/record/4081595/files/bindings.tar.gz?download=1)
-[Aminoacid Fasta](https://zenodo.org/record/4081595/files/fasta.tar.gz?download=1   )
-[Nucleotide Fasta](https://zenodo.org/record/4081595/files/nucleotides.tar.gz?download=1    )
+- [Annotations](https://zenodo.org/record/4081595/files/annotations.tar.gz?download=1)  
+- [Bindings](https://zenodo.org/record/4081595/files/bindings.tar.gz?download=1)  
+- [Aminoacid Fasta](https://zenodo.org/record/4081595/files/fasta.tar.gz?download=1   )  
+- [Nucleotide Fasta](https://zenodo.org/record/4081595/files/nucleotides.tar.gz?download=1    )  
+
+To obtain the frecuencies table Annotation and Binding files are needed.
 
 
 ## Run ActDes to get abundance table   
