@@ -8,6 +8,7 @@ Scripts used in the curated database of 612 high quality actinobacterial genomes
 
 - Calculated abundance tables  
 `perl F1_FunctionCountBindings.pl ID_all_species12042018`  
+!(table)[images/FunctionTable.csv.png]
 
 ## New data base from other RAST genomes  
 https://github.com/nselem/myrast 
