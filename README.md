@@ -3,6 +3,9 @@ Scripts used in the curated database of 612 high quality actinobacterial genomes
 
 [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/nselem/ActDES/master)
 
+Direct to JupyterNotebook [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/nselem/ActDES/master?filepath=https%3A%2F%2Fgithub.com%2Fnselem%2FActDES%2Fblob%2Fmaster%2FActDES.ipynb)
+  
+
 ## Download genome annotations from Zenodo  
 Annotation, nucleotides and aminoacid data for 612 genomes in ActDES have been deposited at ZENODO repository with the following doi: [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.4081595.svg)](https://doi.org/10.5281/zenodo.4081595)
 
