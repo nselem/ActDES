@@ -1,9 +1,9 @@
 # ActDES-a Curated Actinobacterial Database for Evolutionary Studies   
 Scripts used in the curated database of 612 high quality actinobacterial genomes from 80 genera, chosen to represent a broad phylogenetic group with equivalent genome re-annotation. 
 
-[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/nselem/ActDES/master)
+Direct to JupyterNotebook [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/nselem/ActDES/master)
 
-Direct to JupyterNotebook [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/nselem/ActDES/master?filepath=https%3A%2F%2Fgithub.com%2Fnselem%2FActDES%2FActDES.ipynb)
+
 
   
 
