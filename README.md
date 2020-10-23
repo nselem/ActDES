@@ -5,8 +5,6 @@ Direct to JupyterNotebook [![Binder](https://mybinder.org/badge_logo.svg)](https
 
 
 ![imagen](images/ActDESJupyter.png)
-<img src="https://github.com/nselem/ActDES/images/ActDESJupyter.png" width="400" height="790">
-
 
   
 
