@@ -3,7 +3,7 @@ Scripts used in the curated database of 612 high quality actinobacterial genomes
 
 Direct to JupyterNotebook [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/nselem/ActDES/master)
 
-![imagen](images/ActDESJupyter.png)
+![imagen](images/ActDESJupyter.png =100x20)
   
 
 ## Download genome annotations from Zenodo  
